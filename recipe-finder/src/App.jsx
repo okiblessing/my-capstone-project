@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import AboutPage from "./components/AboutPage";
+import RecipeList from "./components/RecipeList";
+import RecipeDetails from "./components/RecipeDetails";
+import SearchBar from "./components/SearchBar";
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [searchQuery, setSearchQuery] = useState('');
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      <div className="app-container">
+        <Navbar />
+        <Routes>
+          {/* Main Recipe Page with Search Bar */}
+          <Route 
+            path="/recipes" 
+            element={
+              <>
+                <SearchBar onSearch={setSearchQuery} />
+                <h1 className="app-title">Find Your Flavour</h1>
+                <RecipeList searchQuery={searchQuery} />
+              </>
+            } 
+          />
 
-export default App
+          {/* Recipe Details Page */}
+          <Route path="/recipe/:id" element={<RecipeDetails />} />
+          
+          {/* Other Routes */}
+          <Route path="/" element={<HeroSection />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+};
+
+export default App;

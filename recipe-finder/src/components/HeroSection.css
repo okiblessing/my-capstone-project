@@ -1,0 +1,63 @@
+/* src/components/HeroSection.css */
+
+.hero-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .hero-section .background-image {
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/IMG_4862.JPG');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .hero-section .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  }
+  
+  .hero-section .content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .hero-section p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .hero-section button {
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: #e0e0e0;
+    color: #333;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-section button:hover {
+    background-color: rgb(188, 143, 108);
+  }
+  
