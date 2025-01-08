@@ -1,16 +1,15 @@
 import React from 'react';
-import "./AboutPage.css"; // Import your separate CSS file
-
+import "./AboutPage.css";
 const AboutPage = () => {
   return (
     <div className="about-container">
-      {/* Overlay */}
+      
       <div className="overlay"></div>
       
-      {/* Content in 3 Columns */}
+      
       <div className="about-content">
         
-        {/* First Column */}
+        
         <div className="column">
           <h2 className="section-heading">Introduction</h2>
           <p className="section-content">
@@ -19,7 +18,7 @@ const AboutPage = () => {
           </p>
         </div>
 
-        {/* Second Column */}
+        
         <div className="column">
           <h2 className="section-heading">How It Works</h2>
           <p className="section-content">

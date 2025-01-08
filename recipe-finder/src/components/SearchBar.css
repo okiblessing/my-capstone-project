@@ -1,4 +1,4 @@
-/* Search Bar Container */
+
 .search-bar-container {
     display: flex;
     justify-content: center;
@@ -6,47 +6,47 @@
     margin: 20px 0;
   }
   
-  /* Wrapper for the input and icon */
+ 
   .search-bar-wrapper {
     display: flex;
     align-items: center;
     padding: 10px 10px;
-    width: 60%; /* Adjust the width */
+    width: 60%; 
     position: relative;
   }
   
-  /* Styling the search bar to make it longer */
+  
   .search-bar {
-    width: 100%; /* Full width of the wrapper */
-    padding: 12px 20px; /* Padding for better size */
-    font-size: 1.2rem; /* Adjust font size */
-    border: 2px solid #8d6e63; /* Border color */
-    border-radius: 30px; /* Rounded corners */
+    width: 100%; 
+    padding: 12px 20px; 
+    font-size: 1.2rem; 
+    border: 2px solid #8d6e63; 
+    border-radius: 30px; 
     outline: none;
-    transition: all 0.3s ease; /* Smooth transition */
+    transition: all 0.3s ease; 
   }
   
-  /* Add focus and hover effects */
+  
   .search-bar:focus {
-    border-color: #6d4c41; /* Darker border on focus */
-    box-shadow: 0 0 10px rgba(141, 110, 63, 0.5); /* Light shadow effect */
+    border-color: #6d4c41; 
+    box-shadow: 0 0 10px rgba(141, 110, 63, 0.5); 
   }
   
   .search-bar:hover {
-    border-color: #6d4c41; /* Change border on hover */
+    border-color: #6d4c41; 
   }
   
   .search-bar::placeholder {
-    color: #6d4c41; /* Placeholder color */
+    color: #6d4c41; 
     padding-left: 20px;
   }
   
-  /* Styling the search icon */
+  
   .material-icons {
     position: absolute;
-    left: 12px; /* Positioning the icon inside the input */
-    font-size: 1.5rem; /* Icon size */
-    color: #6d4c41; /* Icon color */
-    pointer-events: none; /* Prevent interaction with the icon */
+    left: 12px; 
+    font-size: 1.5rem; 
+    color: #6d4c41; 
+    pointer-events: none; 
   }
   

@@ -11,20 +11,20 @@ const HeroSection = () => {
 
   return (
     <div className="hero-section">
-      {/* Background Image */}
+     
       <div className="background-image" alt="Delicious food on a plate"></div>
 
-      {/* Overlay */}
+      
       <div className="overlay"></div>
 
-      {/* Content */}
+      
       <div className="content">
         <h1>Cooking Experiences Like a Chef</h1>
         <p>
           Where flavor meets passion. <br /> Cook, create, enjoy!
         </p>
 
-        {/* Get Started Button */}
+        
         <button onClick={handleGetStarted}>GET STARTED</button>
       </div>
     </div>

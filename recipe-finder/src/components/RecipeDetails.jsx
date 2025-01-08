@@ -4,12 +4,12 @@ import './RecipeDetails.css';
 
 const RecipeDetails = () => {
   const navigate = useNavigate();
-  const { id } = useParams(); // Get the recipe ID from the URL
-  const [recipe, setRecipe] = useState(null); // State to store recipe data
-  const [loading, setLoading] = useState(true); // Loading state for fetching data
-  const [error, setError] = useState(null); // State to store error message
+  const { id } = useParams(); 
+  const [recipe, setRecipe] = useState(null); 
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null); 
 
-  // Fetch the recipe details when the component mounts or the recipe ID changes
+  
   useEffect(() => {
     const fetchRecipeDetails = async () => {
       try {
@@ -17,31 +17,31 @@ const RecipeDetails = () => {
         const data = await response.json();
 
         if (data.meals) {
-          setRecipe(data.meals[0]); // Set the first recipe from the API response
+          setRecipe(data.meals[0]); 
         } else {
           setError('Recipe not found');
         }
       } catch (error) {
         setError('Failed to fetch recipe details');
       } finally {
-        setLoading(false); // Set loading to false after fetching is complete
+        setLoading(false); 
       }
     };
 
     fetchRecipeDetails();
-  }, [id]); // Re-fetch if the recipe ID changes
+  }, [id]); 
 
-  // If the data is still loading, display a loading message
+  
   if (loading) {
     return <p>Loading...</p>;
   }
 
-  // If there's an error, display the error message
+  
   if (error) {
     return <p>{error}</p>;
   }
 
-  // If recipe data is available, render the recipe details
+  
   return (
     <div className="recipe-container">
       {/* Back Button */}
@@ -58,7 +58,7 @@ const RecipeDetails = () => {
         <h3>Ingredients:</h3>
         <ul>
           {Object.keys(recipe)
-            .filter((key) => key.includes('strIngredient') && recipe[key]) // Filter only ingredients
+            .filter((key) => key.includes('strIngredient') && recipe[key]) 
             .map((key, index) => (
               <li className='ingredient' key={index}>{recipe[key]}</li>
             ))}

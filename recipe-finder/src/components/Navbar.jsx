@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Track whether the menu is open
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen); // Toggle menu open/close
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen); 
 
   return (
     <nav className="navbar">
@@ -37,4 +36,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

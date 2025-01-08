@@ -1,41 +1,38 @@
-/* About Container */
+
 .about-container {
     position: relative;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh; 
     background-image: url('/images/IMG_4903.JPG');
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 40px 20px; /* Space on the sides */
-    
-    /* Flexbox to center content in 3 columns */
+    padding: 40px 20px; 
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    text-align: center; /* Center text in columns */
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
   }
   
   .about-container .overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Slightly dark overlay */
-    z-index: -1; /* Behind the content */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
   }
   
-  /* About Content (3 columns) */
   .about-content {
-    display: flex; /* Set to flex for 3 columns */
-    justify-content: space-between; /* Distribute space between columns */
-    width: 60%; /* Set width of the content container */
-    max-width: 1200px; /* Optional: limit max width for larger screens */
+    display: flex; 
+    justify-content: space-between; 
+    width: 60%; 
+    max-width: 1200px; 
   }
   
   .column {
-    flex: 1; /* Each column should take equal space */
-    margin: 0 60px; /* Space between columns */
+    flex: 1; 
+    margin: 0 60px; 
   }
   
-  /* Section Headings */
+  
   .about-heading {
     font-size: 3rem;
     font-weight: bold;
@@ -56,60 +53,60 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
-  /* Lists */
+  
   .tech-list,
   .features-list {
     list-style-type: disc;
     padding-left: 20px;
   }
   
-  /* Responsive Design */
   
-  /* Medium screens (tablets) */
+  
+  
   @media (max-width: 768px) {
     .about-content {
-      flex-direction: column; /* Stack columns vertically */
-      width: 80%; /* Make the content container smaller */
+      flex-direction: column; 
+      width: 80%; 
     }
   
     .column {
-      margin: 20px 0; /* Add space between stacked columns */
+      margin: 20px 0; 
     }
   
     .about-heading {
-      font-size: 2.5rem; /* Make the main heading smaller */
+      font-size: 2.5rem; 
     }
   
     .section-heading {
-      font-size: 1.8rem; /* Make section headings smaller */
+      font-size: 1.8rem; 
     }
   
     .section-content {
-      font-size: 1.1rem; /* Make content text slightly smaller */
+      font-size: 1.1rem; 
     }
   }
   
-  /* Small screens (phones) */
+  
   @media (max-width: 480px) {
     .about-content {
-      flex-direction: column; /* Stack columns vertically */
-      width: 90%; /* Make content container even smaller */
+      flex-direction: column; 
+      width: 90%; 
     }
   
     .column {
-      margin: 15px 0; /* Less margin between columns */
+      margin: 15px 0; 
     }
   
     .about-heading {
-      font-size: 2rem; /* Make the main heading even smaller */
+      font-size: 2rem; 
     }
   
     .section-heading {
-      font-size: 1.6rem; /* Make section headings smaller */
+      font-size: 1.6rem; 
     }
   
     .section-content {
-      font-size: 1rem; /* Adjust font size for readability */
+      font-size: 1rem; 
     }
   }
   

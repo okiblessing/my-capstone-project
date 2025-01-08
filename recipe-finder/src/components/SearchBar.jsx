@@ -22,7 +22,7 @@ const SearchBar = ({ onSearch }) => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search for recipes..."
-          onKeyDown={handleSearch} // Listen for 'Enter' key
+          onKeyDown={handleSearch} 
         />
       </div>
     </div>
