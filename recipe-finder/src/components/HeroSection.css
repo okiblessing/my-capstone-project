@@ -1,14 +1,23 @@
-/* src/components/HeroSection.css */
-
-.hero-section {
-    position: relative;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+/* Reset and ensure no margin/padding on the entire page */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Full height of viewport */
+    width: 100%; /* Full width of viewport */
   }
   
+  /* Hero Section: Full Screen */
+  .hero-section {
+    position: relative;
+    height: 100vh;  /* Full viewport height */
+    display: flex;
+    align-items: center;  /* Vertically center content */
+    justify-content: center;  /* Horizontally center content */
+    color: white;
+    overflow: hidden;  /* Hide any overflow */
+  }
+  
+  /* Background Image Styling */
   .hero-section .background-image {
     position: absolute;
     inset: 0;
@@ -16,37 +25,44 @@
     background-size: cover;
     background-position: center;
     height: 100%;
-    margin: 0;
-    padding: 0;
+    width: 100%;  /* Ensure it spans full width */
   }
   
+  /* Overlay for Darkening the Image */
   .hero-section .overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent dark overlay */
   }
   
+  /* Content Styling */
   .hero-section .content {
     position: relative;
-    z-index: 10;
+    z-index: 10;  /* Ensure it appears above the background and overlay */
     text-align: center;
     padding: 1rem;
+    width: 100%;  /* Ensure it takes full width of the viewport */
+    box-sizing: border-box;  /* Include padding in width calculation */
   }
   
+  /* Hero Title Styling */
   .hero-section h1 {
     font-size: 3rem;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1rem;
   }
   
+  /* Hero Description Styling */
   .hero-section p {
     margin-top: 1rem;
     font-size: 1.25rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1.5rem;
   }
   
+  /* Button Styling */
   .hero-section button {
-    margin-top: 1.5rem;
     padding: 1rem 2rem;
     background-color: #e0e0e0;
     color: #333;
@@ -55,9 +71,26 @@
     border-radius: 9999px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border: none;
   }
   
+  /* Button Hover Effects */
   .hero-section button:hover {
     background-color: rgb(188, 143, 108);
+  }
+  
+  /* Optional: Make text responsive for smaller screens */
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-section p {
+      font-size: 1.1rem;
+    }
+  
+    .hero-section button {
+      padding: 0.75rem 1.5rem;
+    }
   }
   
