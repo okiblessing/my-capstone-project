@@ -6,7 +6,7 @@
     padding: 0.5rem 1rem;
     color: white;
     background-color: rgba(158, 125, 100, 0.85);
-    position: relative;
+    position: relative;  /* Needed for dropdown positioning */
   }
   
   /* Logo Text */
@@ -16,16 +16,32 @@
     font-family: "Rubik Vinyl", serif;
   }
   
-  /* Navigation Links (Default for Desktop) */
-  .nav-links {
-    list-style-type: none;
-    display: flex;               /* By default, links are displayed horizontally */
-    gap: 2rem;                  /* Adjust space between menu items */
-    position: relative;
+  /* Menu Button (for dropdown) */
+  .menu {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
   }
   
-  .nav-links li {
-    display: inline-block;
+  /* Dropdown Menu */
+  .dropdown-menu {
+    list-style-type: none;
+    position: absolute;
+    top: 20px; /* Adjust based on navbar height */
+    left: 0;
+    background-color:  rgba(85, 60, 41, 0.85);
+    width: 100%;
+    padding: 1rem;
+    z-index: 10; /* Make sure the menu appears above other elements */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 5px;
+  }
+  
+  .dropdown-menu li {
+    text-align: center;
   }
   
   .nav-link {
@@ -35,23 +51,18 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
-  .nav-links a:hover {
+  .nav-link:hover {
     text-decoration: underline;
   }
   
   /* Mobile Responsiveness */
   @media (max-width: 768px) {
-    .nav-links {
-      display: flex;             /* Change to flexbox for better control */
-      flex-direction: column;    /* Stack the items vertically on small screens */
-      gap: 1rem;                 /* Space between items */
-      align-items: center;       /* Center items */
-      padding: 1rem 0;           /* Add some vertical space */
+    .menu {
+      font-size: 1rem; /* Adjust font size for mobile */
     }
   
-    .nav-links li {
-      display: block;            /* Display links as blocks, so they stack */
-      text-align: center;        /* Center align the text */
+    .dropdown-menu {
+      width: 100%; /* Full width on mobile */
     }
   }
   
