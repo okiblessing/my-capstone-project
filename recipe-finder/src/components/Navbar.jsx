@@ -9,6 +9,9 @@ const Navbar = () => {
   // Function to toggle the dropdown visibility
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
+  // Function to close the dropdown when a link is clicked
+  const closeDropdown = () => setIsDropdownOpen(false);
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -19,13 +22,13 @@ const Navbar = () => {
       <div className="nav-links-desktop">
         <ul>
           <li>
-            <Link className="nav-link" to="/">Home</Link>
+            <Link className="nav-link" to="/" onClick={closeDropdown}>Home</Link>
           </li>
           <li>
-            <Link className="nav-link" to="/recipes">Recipes</Link>
+            <Link className="nav-link" to="/recipes" onClick={closeDropdown}>Recipes</Link>
           </li>
           <li>
-            <Link className="nav-link" to="/about">About</Link>
+            <Link className="nav-link" to="/about" onClick={closeDropdown}>About</Link>
           </li>
         </ul>
       </div>
@@ -39,13 +42,13 @@ const Navbar = () => {
       {isDropdownOpen && (
         <ul className="dropdown-menu">
           <li>
-            <Link className="nav-link" to="/">Home</Link>
+            <Link className="nav-link" to="/" onClick={closeDropdown}>Home</Link>
           </li>
           <li>
-            <Link className="nav-link" to="/recipes">Recipes</Link>
+            <Link className="nav-link" to="/recipes" onClick={closeDropdown}>Recipes</Link>
           </li>
           <li>
-            <Link className="nav-link" to="/about">About</Link>
+            <Link className="nav-link" to="/about" onClick={closeDropdown}>About</Link>
           </li>
         </ul>
       )}

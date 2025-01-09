@@ -1,4 +1,4 @@
-/* Search Bar Container */
+
 .search-bar-container {
     display: flex;
     justify-content: center;
@@ -6,17 +6,17 @@
     margin: 20px 0;
   }
   
-  /* Wrapper for Search Bar */
+  
   .search-bar-wrapper {
     display: flex;
     align-items: center;
     padding: 10px 10px;
-    width: 80%; /* Change to 80% for better responsiveness */
+    width: 80%; 
     position: relative;
-    max-width: 600px; /* Add max-width for larger screens */
+    max-width: 600px; 
   }
   
-  /* Search Bar */
+  
   .search-bar {
     width: 100%; 
     padding: 12px 20px; 
@@ -24,65 +24,65 @@
     border: 2px solid #8d6e63; 
     border-radius: 30px; 
     outline: none;
-    padding-left: 40px; /* Added padding to the left for the icon */
+    padding-left: 40px; 
     transition: all 0.3s ease; 
   }
   
-  /* Search Bar Focus */
+  
   .search-bar:focus {
     border-color: #6d4c41; 
     box-shadow: 0 0 10px rgba(141, 110, 63, 0.5); 
   }
   
-  /* Search Bar Hover */
+  
   .search-bar:hover {
     border-color: #6d4c41; 
   }
   
-  /* Placeholder Styling */
+  
   .search-bar::placeholder {
     color: #6d4c41; 
     padding-left: 20px;
   }
   
-  /* Material Icons (Icon inside Search Bar) */
+ 
   .material-icons {
     position: absolute;
-    left: 15px; /* Increase the left space for better positioning */
+    left: 15px; 
     font-size: 1.5rem; 
     color: #6d4c41; 
     pointer-events: none; 
-    padding: 0 10px; /* Added padding on both sides of the icon */
+    padding: 0 10px; 
   }
   
-  /* Media Query for Responsiveness */
+  
   @media (max-width: 768px) {
     .search-bar-wrapper {
-      width: 90%; /* Increase the width to 90% on smaller screens */
+      width: 90%; 
     }
   
     .search-bar {
-      padding-left: 35px; /* Adjust padding to keep the text aligned with icon */
-      font-size: 1rem; /* Slightly reduce font size for smaller screens */
+      padding-left: 35px; 
+      font-size: 1rem; 
     }
   
     .material-icons {
-      font-size: 1.3rem; /* Reduce icon size for smaller screens */
+      font-size: 1.3rem; 
     }
   }
   
   @media (max-width: 480px) {
     .search-bar-wrapper {
-      width: 95%; /* Make search bar even wider on very small screens */
+      width: 95%; 
     }
   
     .search-bar {
-      padding-left: 30px; /* Adjust padding for smaller screens */
-      font-size: 0.9rem; /* Reduce font size further */
+      padding-left: 30px; 
+      font-size: 0.9rem; 
     }
   
     .material-icons {
-      font-size: 1.2rem; /* Adjust icon size further for very small screens */
+      font-size: 1.2rem; 
     }
   }
   
