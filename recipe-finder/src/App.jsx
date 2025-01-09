@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import AboutPage from "./components/AboutPage";
@@ -34,6 +34,9 @@ const App = () => {
           {/* Other Routes */}
           <Route path="/" element={<HeroSection />} />
           <Route path="/about" element={<AboutPage />} />
+
+          {/* Catch-all Redirect to Home */}
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>
     </Router>
