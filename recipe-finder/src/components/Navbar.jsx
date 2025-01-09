@@ -15,12 +15,27 @@ const Navbar = () => {
         <span className="logo-text">KitchenHelper</span>
       </div>
 
-      {/* Menu Button */}
+      {/* Desktop Navigation Links */}
+      <div className="nav-links-desktop">
+        <ul>
+          <li>
+            <Link className="nav-link" to="/">Home</Link>
+          </li>
+          <li>
+            <Link className="nav-link" to="/recipes">Recipes</Link>
+          </li>
+          <li>
+            <Link className="nav-link" to="/about">About</Link>
+          </li>
+        </ul>
+      </div>
+
+      {/* Mobile Menu Button */}
       <div className="menu" onClick={toggleDropdown}>
         Menu
       </div>
 
-      {/* Dropdown Menu */}
+      {/* Mobile Dropdown Menu */}
       {isDropdownOpen && (
         <ul className="dropdown-menu">
           <li>
@@ -39,4 +54,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
