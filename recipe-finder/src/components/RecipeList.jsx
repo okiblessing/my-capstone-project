@@ -43,7 +43,7 @@ const RecipeList = ({ searchQuery }) => {
             alt={recipe.strMeal} 
             className="recipe-image" 
           />
-          <h3 className="recipe-title">{recipe.strMeal}</h3>
+          <h3 className="recipe-titles">{recipe.strMeal}</h3>
           <p className="recipe-category">{recipe.strCategory} - {recipe.strArea}</p>
           <Link to={`/recipe/${recipe.idMeal}`}> {/* Corrected Link */}
             <button className="view-details-btn">View Details</button>
